@@ -1,8 +1,7 @@
-require 'minitest/autorun'
-require './number'
+require "minitest/autorun"
+require "./number"
 
 class TestHiker < MiniTest::Test
-
   def test_upto_ten
     assert_equal "I", Number.new(1).to_roman
     assert_equal "II", Number.new(2).to_roman
