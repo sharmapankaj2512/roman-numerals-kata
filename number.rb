@@ -32,3 +32,17 @@ class Number
     return "I" * times
   end
 end
+
+class Roman
+  def initialize(decimal)
+    @decimal = decimal
+  end
+
+  def self.equivalent_of(decimal)
+    return Roman.new(decimal)
+  end
+
+  def notation()
+    return Number.new(@decimal).to_roman
+  end
+end
