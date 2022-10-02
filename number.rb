@@ -1,4 +1,6 @@
 class Roman
+  attr_reader :notation
+
   def initialize(notation)
     @notation = notation
   end
@@ -9,6 +11,11 @@ class Roman
 
   def notation()
     @notation
+  end
+
+  def ==(other)
+    self.class == other.class &&
+      @notation == other.notation
   end
 
   def self.to_roman(decimal)

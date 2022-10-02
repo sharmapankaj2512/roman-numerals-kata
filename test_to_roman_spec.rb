@@ -3,20 +3,20 @@ require "./number"
 
 class TestHiker < MiniTest::Test
   def test_upto_ten
-    assert_equal "I", Roman.equivalent_of(1).notation
-    assert_equal "II", Roman.equivalent_of(2).notation
-    assert_equal "III", Roman.equivalent_of(3).notation
-    assert_equal "IV", Roman.equivalent_of(4).notation
-    assert_equal "V", Roman.equivalent_of(5).notation
-    assert_equal "VI", Roman.equivalent_of(6).notation
-    assert_equal "VII", Roman.equivalent_of(7).notation
-    assert_equal "VIII", Roman.equivalent_of(8).notation
-    assert_equal "IX", Roman.equivalent_of(9).notation
-    assert_equal "X", Roman.equivalent_of(10).notation
+    assert_equal Roman.new("I"), Roman.equivalent_of(1)
+    assert_equal Roman.new("II"), Roman.equivalent_of(2)
+    assert_equal Roman.new("III"), Roman.equivalent_of(3)
+    assert_equal Roman.new("IV"), Roman.equivalent_of(4)
+    assert_equal Roman.new("V"), Roman.equivalent_of(5)
+    assert_equal Roman.new("VI"), Roman.equivalent_of(6)
+    assert_equal Roman.new("VII"), Roman.equivalent_of(7)
+    assert_equal Roman.new("VIII"), Roman.equivalent_of(8)
+    assert_equal Roman.new("IX"), Roman.equivalent_of(9)
+    assert_equal Roman.new("X"), Roman.equivalent_of(10)
   end
 
   def test_upto_nineteen
-    assert_equal "XI", Roman.equivalent_of(11).notation
-    assert_equal "XIV", Roman.equivalent_of(14).notation
+    assert_equal Roman.new("XI"), Roman.equivalent_of(11)
+    assert_equal Roman.new("XIV"), Roman.equivalent_of(14)
   end
 end
