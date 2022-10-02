@@ -1,27 +1,27 @@
 class Roman
-  def initialize(decimal)
-    @decimal = decimal
+  def initialize(notation)
+    @notation = notation
   end
 
   def self.equivalent_of(decimal)
-    return Roman.new(decimal)
+    return Roman.new(to_roman(decimal))
   end
 
   def notation()
-    return to_roman
+    @notation
   end
 
-  def to_roman
-    if @decimal < 10
-      return single_digit(@decimal)
+  def self.to_roman(decimal)
+    if decimal < 10
+      return single_digit(decimal)
     end
-    if @decimal == 10
+    if decimal == 10
       return "X"
     end
-    return "X" + single_digit(@decimal % 10)
+    return "X" + single_digit(decimal % 10)
   end
 
-  def single_digit(number)
+  def self.single_digit(number)
     if number < 4
       return times_one(number)
     end
@@ -36,7 +36,7 @@ class Roman
     end
   end
 
-  def times_one(times)
+  def self.times_one(times)
     return "I" * times
   end
 end
