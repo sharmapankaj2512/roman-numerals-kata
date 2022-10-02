@@ -4,19 +4,19 @@ require "./number"
 class TestHiker < MiniTest::Test
   def test_upto_ten
     assert_equal "I", Roman.equivalent_of(1).notation()
-    assert_equal "II", Number.new(2).to_roman
-    assert_equal "III", Number.new(3).to_roman
-    assert_equal "IV", Number.new(4).to_roman
-    assert_equal "V", Number.new(5).to_roman
-    assert_equal "VI", Number.new(6).to_roman
-    assert_equal "VII", Number.new(7).to_roman
-    assert_equal "VIII", Number.new(8).to_roman
-    assert_equal "IX", Number.new(9).to_roman
-    assert_equal "X", Number.new(10).to_roman
+    assert_equal "II", Roman.equivalent_of(2).notation()
+    assert_equal "III", Roman.equivalent_of(3).notation()
+    assert_equal "IV", Roman.equivalent_of(4).notation()
+    assert_equal "V", Roman.equivalent_of(5).notation()
+    assert_equal "VI", Roman.equivalent_of(6).notation()
+    assert_equal "VII", Roman.equivalent_of(7).notation()
+    assert_equal "VIII", Roman.equivalent_of(8).notation()
+    assert_equal "IX", Roman.equivalent_of(9).notation()
+    assert_equal "X", Roman.equivalent_of(10).notation()
   end
 
   def test_upto_nineteen
-    assert_equal "XI", Number.new(11).to_roman
-    assert_equal "XIV", Number.new(14).to_roman
+    assert_equal "XI", Roman.equivalent_of(11).notation()
+    assert_equal "XIV", Roman.equivalent_of(14).notation()
   end
 end

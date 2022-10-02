@@ -1,16 +1,24 @@
-class Number
-  def initialize(number)
-    @number = number
+class Roman
+  def initialize(decimal)
+    @decimal = decimal
+  end
+
+  def self.equivalent_of(decimal)
+    return Roman.new(decimal)
+  end
+
+  def notation()
+    return to_roman
   end
 
   def to_roman
-    if @number < 10
-      return single_digit(@number)
+    if @decimal < 10
+      return single_digit(@decimal)
     end
-    if @number == 10
+    if @decimal == 10
       return "X"
     end
-    return "X" + single_digit(@number % 10)
+    return "X" + single_digit(@decimal % 10)
   end
 
   def single_digit(number)
@@ -30,19 +38,5 @@ class Number
 
   def times_one(times)
     return "I" * times
-  end
-end
-
-class Roman
-  def initialize(decimal)
-    @decimal = decimal
-  end
-
-  def self.equivalent_of(decimal)
-    return Roman.new(decimal)
-  end
-
-  def notation()
-    return Number.new(@decimal).to_roman
   end
 end
