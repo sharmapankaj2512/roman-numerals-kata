@@ -21,6 +21,7 @@ class Roman
     return "XX" if decimal < 30
     return "XXX" if decimal < 40
     return "XL" if decimal < 50
+    return "L" if decimal < 60
   end
 
   def self.single_digit(number)
