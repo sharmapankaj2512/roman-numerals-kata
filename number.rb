@@ -20,6 +20,7 @@ class Roman
     return "X" if decimal < 20
     return "XX" if decimal < 30
     return "XXX" if decimal < 40
+    return "XL" if decimal < 50
   end
 
   def self.single_digit(number)
