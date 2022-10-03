@@ -5,14 +5,14 @@ class Roman
     @notation = notation
   end
 
-  def self.equivalent_of(decimal)
-    return Roman.new(
-      multiple_of_ten(decimal) + single_digit(decimal % 10))
-  end
-
   def ==(other)
     self.class == other.class &&
       @notation == other.notation
+  end
+
+  def self.equivalent_of(decimal)
+    return Roman.new(
+      multiple_of_ten(decimal) + single_digit(decimal % 10))
   end
 
   def self.multiple_of_ten(decimal)
