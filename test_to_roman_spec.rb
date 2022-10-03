@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require "./number"
+require "./roman"
 
 class TestRoman < MiniTest::Test
   def test_upto_ten
