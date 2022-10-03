@@ -18,5 +18,7 @@ class TestHiker < MiniTest::Test
   def test_upto_nineteen
     assert_equal Roman.new("XI"), Roman.equivalent_of(11)
     assert_equal Roman.new("XIV"), Roman.equivalent_of(14)
+    assert_equal Roman.new("XVI"), Roman.equivalent_of(16)
+    assert_equal Roman.new("XIX"), Roman.equivalent_of(19)
   end
 end
