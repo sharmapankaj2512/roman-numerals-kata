@@ -9,10 +9,6 @@ class Roman
     return Roman.new(to_roman(decimal))
   end
 
-  def notation()
-    @notation
-  end
-
   def ==(other)
     self.class == other.class &&
       @notation == other.notation
