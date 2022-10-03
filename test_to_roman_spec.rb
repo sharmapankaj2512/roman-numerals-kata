@@ -24,5 +24,6 @@ class TestRoman < MiniTest::Test
   def test_multiple_of_ten
     assert_equal Roman.new("X"), Roman.equivalent_of(10)
     assert_equal Roman.new("XX"), Roman.equivalent_of(20)
+    assert_equal Roman.new("XXX"), Roman.equivalent_of(30)
   end
 end
