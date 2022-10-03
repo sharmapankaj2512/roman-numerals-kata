@@ -27,5 +27,6 @@ class TestRoman < MiniTest::Test
     assert_equal Roman.new("XXX"), Roman.equivalent_of(30)
     assert_equal Roman.new("XL"), Roman.equivalent_of(40)
     assert_equal Roman.new("L"), Roman.equivalent_of(50)
+    assert_equal Roman.new("LX"), Roman.equivalent_of(60)
   end
 end

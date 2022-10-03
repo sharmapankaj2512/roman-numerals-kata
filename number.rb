@@ -19,6 +19,7 @@ class Roman
     return times_ten(decimal / 10) if decimal < 40
     return "XL" if decimal < 50
     return "L" if decimal < 60
+    return "LX" if decimal < 70
   end
 
   def self.multiple_of_one(number)
