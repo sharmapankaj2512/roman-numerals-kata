@@ -12,7 +12,7 @@ class Roman
 
   def self.equivalent_of(decimal)
     return Roman.new(
-      multiple_of_ten(decimal) + single_digit(decimal % 10))
+      multiple_of_ten(decimal) + multiple_of_one(decimal % 10))
   end
 
   def self.multiple_of_ten(decimal)
@@ -24,7 +24,7 @@ class Roman
     return "L" if decimal < 60
   end
 
-  def self.single_digit(number)
+  def self.multiple_of_one(number)
     return times_one(number) if number < 4
     return "IV" if number == 4
     return "V" + times_one(number % 5) if number < 9
