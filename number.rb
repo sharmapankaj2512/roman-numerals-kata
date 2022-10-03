@@ -6,7 +6,8 @@ class Roman
   end
 
   def self.equivalent_of(decimal)
-    return Roman.new(to_roman(decimal))
+    return Roman.new(
+      multiple_of_ten(decimal) + single_digit(decimal % 10))
   end
 
   def ==(other)
@@ -14,9 +15,9 @@ class Roman
       @notation == other.notation
   end
 
-  def self.to_roman(decimal)
-    return single_digit(decimal) if decimal < 10
-    return "X" + single_digit(decimal % 10)
+  def self.multiple_of_ten(decimal)
+    return "" if decimal < 10
+    return "X" if decimal % 10 == 0
   end
 
   def self.single_digit(number)
