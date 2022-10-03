@@ -23,10 +23,10 @@ class Roman
   end
 
   def self.multiple_of_one(number)
-    return times_one(number) if number < 4
-    return "IV" if number == 4
-    return "V" + times_one(number % 5) if number < 9
     return "IX" if number == 9
+    return "V" + times_one(number % 5) if number >= 5
+    return "IV" if number == 4
+    return times_one(number)
   end
 
   def self.times_one(times)
