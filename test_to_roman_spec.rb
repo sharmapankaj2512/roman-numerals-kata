@@ -12,7 +12,6 @@ class TestRoman < MiniTest::Test
     assert_equal Roman.new("VII"), Roman.equivalent_of(7)
     assert_equal Roman.new("VIII"), Roman.equivalent_of(8)
     assert_equal Roman.new("IX"), Roman.equivalent_of(9)
-    assert_equal Roman.new("X"), Roman.equivalent_of(10)
   end
 
   def test_upto_nineteen
@@ -20,5 +19,10 @@ class TestRoman < MiniTest::Test
     assert_equal Roman.new("XIV"), Roman.equivalent_of(14)
     assert_equal Roman.new("XVI"), Roman.equivalent_of(16)
     assert_equal Roman.new("XIX"), Roman.equivalent_of(19)
+  end
+
+  def test_multiple_of_ten
+    assert_equal Roman.new("X"), Roman.equivalent_of(10)
+    assert_equal Roman.new("XX"), Roman.equivalent_of(20)
   end
 end
