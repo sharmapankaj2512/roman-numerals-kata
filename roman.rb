@@ -16,10 +16,7 @@ class Roman
   end
 
   def self.tens_place(decimal)
-    return "LXXX" if decimal >= 80
-    return "LXX" if decimal >= 70
-    return "LX" if decimal >= 60
-    return "L" if decimal >= 50
+    return "L" + times_ten((decimal % 50) / 10) if decimal >= 50
     return "XL" if decimal >= 40
     return times_ten(decimal / 10)
   end
