@@ -16,10 +16,7 @@ class Roman
   end
 
   def self.multiple_of_ten(decimal)
-    return "" if decimal < 10
-    return "X" if decimal < 20
-    return "XX" if decimal < 30
-    return "XXX" if decimal < 40
+    return times_ten(decimal / 10) if decimal < 40
     return "XL" if decimal < 50
     return "L" if decimal < 60
   end
@@ -33,5 +30,9 @@ class Roman
 
   def self.times_one(times)
     return "I" * times
+  end
+
+  def self.times_ten(times)
+    return "X" * times
   end
 end
