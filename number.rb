@@ -17,9 +17,9 @@ class Roman
 
   def self.multiple_of_ten(decimal)
     return "" if decimal < 10
-    return "X" if decimal == 10
-    return "XX" if decimal == 20
-    return "XXX" if decimal == 30
+    return "X" if decimal < 20
+    return "XX" if decimal < 30
+    return "XXX" if decimal < 40
   end
 
   def self.single_digit(number)
