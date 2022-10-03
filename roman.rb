@@ -12,17 +12,17 @@ class Roman
 
   def self.equivalent_of(decimal)
     return Roman.new(
-      multiple_of_ten(decimal) + multiple_of_one(decimal % 10))
+      tens_place(decimal) + ones_place(decimal % 10))
   end
 
-  def self.multiple_of_ten(decimal)
+  def self.tens_place(decimal)
     return "LX" if decimal >= 60
     return "L" if decimal >= 50
     return "XL" if decimal >= 40
     return times_ten(decimal / 10)
   end
 
-  def self.multiple_of_one(number)
+  def self.ones_place(number)
     return "IX" if number == 9
     return "V" + times_one(number % 5) if number >= 5
     return "IV" if number == 4
