@@ -16,7 +16,6 @@ class Roman
 
   def self.to_roman(decimal)
     return single_digit(decimal) if decimal < 10
-    return "X" if decimal == 10
     return "X" + single_digit(decimal % 10)
   end
 
